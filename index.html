@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Про себя</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container flex header-container">
+            <a href="#" class="header-logo">
+               <img src="img/70ff6ce31f7f0d51be35b228e60ff2e6.jpg" class="header-logo" alt="login"> 
+            </a>
+            <ul id="main_nav">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Обо мне</a>
+                 <ul>
+                     <li><a href="#">Увлечения</a></li>
+                     
+                     <li><a href="#">Галерея</a></li>
+                 </ul>
+                </li>
+                <li><a href="#">Цели</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="main">
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content flex">
+                <h1 class="hero-title">
+                    Сергей Костин 
+                </h1>
+                <p class="hero-descr">
+                    Расскажу про себя: немного меньше, чем хотелось)
+                </p>
+                </div>
+            </div>
+        </section>
+        <section id="Thats me" class="Thats me section-offset">
+            <body>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1/4</div>
+                        <img src="img/2A.jpg" alt="1" style="width: 100%;" class="Phototut">
+                        <div class="text">1</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">2/4</div>
+                        <img src="img/RQY0rIN8ax-gUjWcmb0aDClbAYdcRlhcxFKfAnqzeeyX7P5fjcJgKRe2TbofM1MyfADV3PZFB7laLVTYI8pXle_f.jpg" alt="2" style="width: 100%;" class="Phototut">
+                        <div class="text">2</div>
+                    </div>
+                        <div class="mySlides fade">
+                    <div class="numbertext">3/4</div>
+                    <img src="img/Famali.jpg" alt="3" style="width: 100%;" class="Phototut">
+                    <div class="text">3</div>
+                    </div>
+                        <div class="mySlides fade">
+                    <div class="numbertext">4/4</div>
+                    <img src="img/vVr6mvhfQTZzN3hSjyq3WaZ0wVQYKnJ7xyGvVPi2Tg6u6-FFI8GhpSshzchnuWfMlZn6qe_m-IDILdHMihr8w8J5.jpg" alt="4" style="width: 100%;" class="Phototut">
+                    <div class="text">4</div>
+                    </div>
+                    <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlide(1)">&#10095;</a>
+                </div>
+                <br>
+                <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </body>
+            <script>
+                var slideIndex = 1;
+            showSlides(slideIndex);
+            function plusSlide(n){
+                showSlides(slideIndex += n);
+            }
+            function currentSlide(n){
+                showSlides(slideIndex = n);
+            }
+            function showSlides(n){
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if(n > slides.length) {slideIndex = 1}
+                if(n < 1) {slideIndex = slides.length}
+                for(i  = 0;i < slides.length; i++){
+                    slides[i].style.display = "none";
+                }
+                for (i = 0;i < dots.length; i++){
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+            </script>
+        </section>
+        <section id="services" class="services section-offset">
+            <div class="container">
+                <h2 class="section-title services-title">
+                   Увлечения
+                </h2>
+                <p class="section-descr services-descr">
+                    
+                </p>
+                <ul class="services-items list-reset flex">
+                    <li class="services-item flex">
+                    <img class="services-item-icon" src="img/CISTI111.jpg" alt="icon">
+                    <h3 class="services-item-title">
+                       Художество
+                    </h3>
+                    <p class="services-item-descr">
+                       Занимаюсь рисованием, придумывая персонажи, здания и сооружения, природу. Изучаю анимацию, совершенствуя свои навыки.
+                    </p>
+                    </li>
+                    <li class="services-item flex"><img class="services-item-icon" src="img/Burger111.jpg" alt="icon">
+                       <h3 class="services-item-title">
+                           Готовка
+                       </h3>
+                       <p class="services-item-descr">
+                           Занимаюсь приготовлением разных блюд и изобретаю разные вкусности.
+                       </p></li>
+                    <li class="services-item flex"><img class="services-item-icon" src="img/Gantel.webp" alt="icon">
+                       <h3 class="services-item-title">
+                           Спорт
+                       </h3>
+                       <p class="services-item-descr">
+                           Посещаю тренажерный зал, активно занимаюсь плаванием.
+                       </p></li>
+                    <li class="services-item flex"><img class="services-item-icon" src="img/Pristafk.webp" alt="icon">
+                       <h3 class="services-item-title">
+                           Создание игр
+                       </h3>
+                       <p class="services-item-descr">
+                           Изучаю разные программы и создаю модели для компьютерных игр.
+                       </p>
+                   </li>
+                </ul>  
+            </div>
+           </section> 
+           <section id="articles" class="articles section-offset">
+            <div class="container">
+                <h2 class="section-title services-title">
+                    Достижение
+                 </h2>
+                <ul class="articles-list list-reset flex" >
+                    <li class="articles-item">
+                        <article class="blog-preview flex">
+                            <img src="img/FFFFales.jpg" alt="blog photo 1" class="blod-preview-image">
+                            <div class="blog-preview-text">
+                                <time class="blog-preview-time" datetime="2022-03-10 14:54">
+                                    15&nbsp;May 2022
+                                </time>
+                                <h3 class="blog-preview-title">
+                                    Курсовая
+                                </h3>
+                                <p class="blog-preview-descer">
+                                    Сдача курсовой по "Основам программирования" на хорошо!
+                                </p>
+    
+                            </div>
+                            
+                        </article>
+                    </li>
+                    <li class="articles-item">
+                        <article class="blog-preview flex">
+                            <img src="img/CPORT.jpg" alt="blog photo 1" class="blod-preview-image">
+                            <div class="blog-preview-text">
+                                <time class="blog-preview-time" datetime="2022-03-10 14:54">
+                                    28&nbsp;Apr 2022
+                                </time>
+                                <h3 class="blog-preview-title">
+                                    Физ-ра
+                                </h3>
+                                <p class="blog-preview-descer">
+                                    "ЗАЧЕТ ПОЛУЧЕН! УРАААА!!!"
+                                </p>                                
+                            </div>
+                        </article>
+                    </li>
+                    <li class="articles-item">
+                        <article class="blog-preview flex">
+                            <img src="img/Matt1.jpg" alt="blog photo 1" class="blod-preview-image">
+                            <div class="blog-preview-text">
+                                <time class="blog-preview-time" datetime="2022-03-10 14:54">
+                                    29&nbsp;Nov 2021
+                                </time>
+                                <h3 class="blog-preview-title">
+                                    Математика
+                                </h3>
+                                <p class="blog-preview-descer">
+                                    Сдал матиматику на хорошо!
+                                </p>
+    
+                            </div>
+                        </article>
+                    </li>
+                    <li class="articles-item"><article class="blog-preview flex">
+                        <img src="img/Chelabyruk.jpg" alt="blog photo 1" class="blod-preview-image">
+                        <div class="blog-preview-text">
+                            <time class="blog-preview-time" datetime="2022-03-10 14:54">
+                                11&nbsp;Dec 2021
+                            </time>
+                            <h3 class="blog-preview-title">
+                                Учеба
+                            </h3>
+                            <p class="blog-preview-descer">
+                                Готовлюсь к новым достижениям...
+                            </p>
+    
+                        </div>
+                    </article></li>
+                </ul>
+            </div>
+        </section> 
+            <h1>Цели</h1>
+            <div class="testimonials">
+                <div class="scroller">
+                    <div class="item">
+                        <img src="img/12.jpg" alt="">
+                        <div class="card">
+                            <p>
+                                Создание своей компьютерной игры.
+                            </p>
+                            <span></span>             
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/VCmj3.png" alt="John">
+                        <div class="card">
+                            <p>
+                                Научиться программированию.
+                            </p>
+                            <span></span>             
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/БИЗНЕС.webp" alt="John">
+                        <div class="card">
+                            <p>
+                                Открыть свой бизнес.
+                            </p>
+                            <span></span>                       
+                        </div>
+                    </div>
+                </div>
+                <span class="btn prev">&lt;</span>
+                <span class="btn next">&gt;</span>
+            </div>
+            <script>
+                const testimonials = document.querySelector('.testimonials');
+                const scroller = document.querySelector('.scroller');
+                const nextBtn = document.querySelector('.btn.next');
+                const prevBtn = document.querySelector('.btn.prev');
+                const itemWidht = document.querySelector('.item').clientWidth;
+        
+                nextBtn.addEventListener('click', scrollToNextItem);
+                prevBtn.addEventListener('click', scrollToPrevItem);
+        
+                function scrollToNextItem(){
+                    if(scroller.scrollLeft < (scroller.scrollWidth - itemWidht))
+                    scroller.scrollBy({left: itemWidht, top: 0, behavior: 'smooth'});
+                    else
+                    scroller.scrollTo({left: 0, top: 0, behavior:'smooth'});
+                } 
+                function scrollToPrevItem(){
+                    if(scroller.scrollLeft != 0)
+                    scroller.scrollBy({left: -itemWidht, top: 0, behavior: 'smooth'});
+                    else
+                    scroller.scrollTo({left: scroller.scrollWidth, top: 0, behavior:'smooth'});
+                }
+            </script>
+        <section id="contacts" class="contacts section-offset">
+            <div class="container">
+                <h2 class="section-title contacts-title">
+                 Контакты
+                </h2>
+                <address class="contacts-address">
+                    <ul class="contacts-list list-reset flex">
+                        <li class="contacts-item flex contacnts-item-address">
+                            <strong class="contacts-item-caption">
+                                Visit Us
+                            </strong>
+                            <p class="contacts-item-text">
+                             Duis autem vel eum iriure dolor in&nbsp;hendrerit in&nbsp;vulputate velit.
+                            </p>
+                        </li>
+                        <li class="contacts-item">
+                         <strong class="contacts-item-caption flex contacnts-item-call">
+                             Call&nbsp;Us
+                         </strong>
+                         <a href="tel:+79876543210" class="contacnts-item-link flex">
+                             +7 (987) 654-32-10
+                         </a>
+                         <a href="tel:+71234567890" class="contacnts-item-link flrx">
+                             +7 (123) 456-78-90
+                         </a>
+                        </li>
+                        <li class="contacts-item flex contacnts-item-mail">
+                         <strong class="contacts-item-caption">
+                             Email&nbsp;Us
+                         </strong>
+                         <a href="mailto:example@example.com" class="contacnts-item-link">
+                             example@example.com
+                         </a>
+                         <a href="mailto:support@example.com" class="contacnts-item-link">
+                             support@example.com
+                         </a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+         </section> 
+    </main>
+    <footer class="footer">
+        <div class="container flex footer-container">
+            <div class="footer-left flex">
+                <a href="#" class="footer-logo">
+                    <img src="img/70ff6ce31f7f0d51be35b228e60ff2e6.jpg" alt="logo">
+                </a>
+               
+            </div>
+            <div class="footer-right flex">
+                <nav class="fooret-nav">
+                    <ul class="footer-list list-reset flex">
+                        <li class="footer-item">
+                            <a href="#" target="_blank" class="footer-link">Главная</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="#" target="_blank" class="footer-link">Про меня</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="#" target="_blank" class="footer-link">Цели</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="#" target="_blank" class="footer-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="social list-reset flex">
+                    <li class="social-item">
+                        <a href="#" class="social-link social-link-tw"></a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#" class="social-link social-link-linkedin"></a>
+                    </li>
+                    <li class="social-item">
+                        <a href="#" class="social-link social-link-mail"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
